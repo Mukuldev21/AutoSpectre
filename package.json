@@ -1,0 +1,14 @@
+{
+  "name": "autospectre",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "ts-node src/runner.ts",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "playwright": "^1.43.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
