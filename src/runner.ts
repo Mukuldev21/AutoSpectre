@@ -1,6 +1,7 @@
 
 import { runPipeline } from './orchestrator/pipeline';
 import fs from 'fs';
+require('dotenv').config();
 
 const url = process.argv[2];
 if (!url) throw new Error('URL required');
