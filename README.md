@@ -1,18 +1,24 @@
-# AutoSpectre™ 🧠🧪
+<img src="logo/autospectre_logo_rect.png" alt="AutoSpectre Logo" width="100%">
+
+# AutoSpectre™
 ### AI‑Driven, Self‑Healing Playwright Test Generation Platform
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg)](https://www.typescriptlang.org/)
-[![Playwright](https://img.shields.io/badge/Playwright-1.43-green.svg)](https://playwright.dev/)
-[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.43-green.svg?style=flat-square)](https://playwright.dev/)
+[![Status](https://img.shields.io/badge/Status-Active-success.svg?style=flat-square)]()
 
 **Transform a single URL into a robust, enterprise-grade test suite in minutes.**
 
-[Key Features](#-key-features) •
-[Architecture](#-architecture) •
-[Quick Start](#-quick-start) •
-[Configuration](#-configuration) •
-[Roadmap](#-roadmap)
+---
+
+### 📚 Table of Contents
+- [Introduction](#-introduction)
+- [Key Features](#-key-features)
+- [Architecture](#-architecture)
+- [Quick Start](#-quick-start)
+- [Configuration](#-configuration)
+- [Roadmap](#-roadmap)
 
 ---
 
@@ -44,25 +50,24 @@ AutoSpectre™ employs a multi-stage agentic pipeline to transform raw HTML into
 ```mermaid
 flowchart TD
     subgraph Input
-    A[URL Input]
+        A[URL Input]
     end
 
     subgraph Core_Engine ["🧠 AutoSpectre™ Engine"]
-    B[DOM Analysis Agent] -->|Extracts Semantics| C[Discovery Agent]
-    C -->|Identifies Flows| D[Design Agent]
-    D -->|Architects Scenarios| E[Codegen Agent]
+        B[DOM Analysis Agent] -- Extracts Semantics --> C[Discovery Agent]
+        C -- Identifies Flows --> D[Design Agent]
+        D -- Architects Scenarios --> E[Codegen Agent]
     end
 
     subgraph Output
-    E --> F[Playwright Test Suite]
-    F --> G[Page Objects]
+        E --> F[Playwright Test Suite]
+        F --> G[Page Objects]
     end
 
     A --> B
 ```
 
-### Component Roles
-
+**Component Roles:**
 - **DOM Analysis Agent**: Headless browser interaction to scrape and semanticize the DOM.
 - **Discovery Agent**: specialized LLM that identifies potential user flows (e.g., "User executes a search").
 - **Design Agent**: Structures the test steps and defining assertions based on discovered flows.
@@ -73,33 +78,30 @@ flowchart TD
 ## 🚀 Quick Start
 
 ### Prerequisites
-
-- **Node.js**: v16 or higher
-- **npm**: v8 or higher
+- **Node.js**: v16+
+- **npm**: v8+
 
 ### Installation
 
-1.  Clone the repository:
+1.  **Clone the repository**
     ```bash
     git clone https://github.com/Mukuldev21/AutoSpectre.git
     cd AutoSpectre
     ```
 
-2.  Install dependencies:
+2.  **Install dependencies**
     ```bash
     npm install
     ```
 
 ### Usage
 
-**Generate a test suite from a URL:**
-
+**Generate a test suite from a URL**
 ```bash
 npm run generate -- https://www.saucedemo.com
 ```
 
-**Run the generated tests:**
-
+**Run the generated tests**
 ```bash
 npm run test
 ```
@@ -108,20 +110,17 @@ npm run test
 
 ## ⚙️ Configuration
 
-AutoSpectre™ follows the **Policy-as-Code** philosophy. You can customize the behavior of the agents by modifying the policy file at `policies/instructions.md`.
+AutoSpectre™ follows the **Policy-as-Code** philosophy. User behaviors are customizable via `policies/instructions.md`.
 
-**Default Policies (`policies/instructions.md`):**
-
-- ✅ Use **Page Object Model** (POM) structure.
-- ✅ Avoid raw CSS/XPath selectors; prefer `data-test-id`.
-- ✅ Group steps using `test.step()` for better reporting.
-- ✅ Ensure comprehensive assertion coverage.
+**Default Policies:**
+- ✅ Use **Page Object Model** (POM) structure
+- ✅ Avoid raw CSS/XPath selectors (prefer `data-test-id`)
+- ✅ Group steps using `test.step()` for detailed reporting
+- ✅ Comprehensive assertion coverage
 
 ---
 
 ## 📝 Example Output
-
-After running the generation command, AutoSpectre™ produces strictly typed, clean code:
 
 ```typescript
 // generated/tests/Login.spec.ts
@@ -158,12 +157,11 @@ test('[Login] Verify successful user authentication', async ({ page }) => {
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
+We welcome contributions!
 1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+2.  Create your Feature Branch
+3.  Commit your Changes
+4.  Push to the Branch
 5.  Open a Pull Request
 
 ---
