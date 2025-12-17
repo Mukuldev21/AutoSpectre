@@ -148,7 +148,8 @@ test('[Login] Verify successful user authentication', async ({ page }) => {
 
 ## 🗺️ Roadmap
 
-- [ ] **Self-Healing Engine**: Automatically repair broken selectors during runtime.
+- [x] **Self-Healing Engine**: Automatically repairs broken selectors during runtime using a learned memory system.
+- [x] **Groq Integration**: High-speed test generation using `llama-3.3-70b-versatile`.
 - [ ] **Visual Regression**: Integration with Percy/Applitools.
 - [ ] **Cloud Execution**: One-click run on BrowserStack/SauceLabs.
 - [ ] **API Testing**: Auto-generation of API tests from Swagger/OpenAPI specs.

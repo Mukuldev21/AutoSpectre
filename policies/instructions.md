@@ -1,7 +1,27 @@
+```md
+# AutoSpectre Test Rules
 
-# QA Policy
+## Framework
+- Use Playwright with TypeScript
+- Enforce Page Object Model
+- Use async/await
 
-- Use Page Object Model
-- No raw selectors in tests
-- Prefer data-test-id
-- Use test.step
+## Assertions
+- Use expect only
+- Validate navigation, visibility, and content
+
+## Flow Priority
+1. Authentication
+2. Search
+3. Add to Cart
+4. Checkout
+
+## Code Standards
+- No hard waits
+- Use role or data-test-id selectors
+- Add test.step for each action
+
+## Naming
+- Spec: feature.spec.ts
+- Test: [FLOW] should [expected result]
+```
