@@ -6,8 +6,19 @@ export async function analyzeDOM(url: string) {
   const page = await browser.newPage();
   await page.goto(url);
   const dom = await page.evaluate(() => ({
-    inputs: Array.from(document.querySelectorAll('input')).map(i => i.type),
-    buttons: Array.from(document.querySelectorAll('button')).map(b => b.innerText)
+    inputs: Array.from(document.querySelectorAll('input')).map(i => ({
+      type: i.type,
+      name: i.name,
+      id: i.id,
+      placeholder: i.placeholder,
+      testId: i.getAttribute('data-test-id')
+    })),
+    buttons: Array.from(document.querySelectorAll('button')).map(b => ({
+      text: b.innerText,
+      id: b.id,
+      name: b.getAttribute('name'),
+      testId: b.getAttribute('data-test-id')
+    }))
   }));
   await browser.close();
   return dom;
