@@ -18,6 +18,12 @@ export async function analyzeDOM(url: string) {
       id: b.id,
       name: b.getAttribute('name'),
       testId: b.getAttribute('data-test-id')
+    })),
+    links: Array.from(document.querySelectorAll('a')).map(a => ({
+      text: a.innerText,
+      href: a.href,
+      id: a.id,
+      testId: a.getAttribute('data-test-id')
     }))
   }));
   await browser.close();
