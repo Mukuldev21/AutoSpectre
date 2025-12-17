@@ -4,8 +4,8 @@
 ### AI‑Driven, Self‑Healing Playwright Test Generation Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
-[![Playwright](https://img.shields.io/badge/Playwright-1.43-green.svg?style=flat-square)](https://playwright.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.43-2EAD33?style=flat-square&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![Status](https://img.shields.io/badge/Status-Active-success.svg?style=flat-square)]()
 
 **Transform a single URL into a robust, enterprise-grade test suite in minutes.**
