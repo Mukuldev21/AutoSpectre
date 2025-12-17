@@ -1,6 +1,4 @@
-<div align="center">
-
-# AutoSpectre 🧠🧪
+# AutoSpectre™ 🧠🧪
 ### AI‑Driven, Self‑Healing Playwright Test Generation Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -16,13 +14,11 @@
 [Configuration](#-configuration) •
 [Roadmap](#-roadmap)
 
-</div>
-
 ---
 
 ## 📖 Introduction
 
-**AutoSpectre** is a next-generation QA automation platform that leverages Large Language Models (LLMs) to autonomously generate, execute, and maintain Playwright test suites. Unlike traditional record-and-playback tools, AutoSpectre understands the *intent* of your application, creating resilient test flows that adapt to UI changes.
+**AutoSpectre™** is a next-generation QA automation platform that leverages Large Language Models (LLMs) to autonomously generate, execute, and maintain Playwright test suites. Unlike traditional record-and-playback tools, AutoSpectre™ understands the *intent* of your application, creating resilient test flows that adapt to UI changes.
 
 > **Input**: A single URL (e.g., `https://www.saucedemo.com`)  
 > **Output**: A fully functional, production-ready Playwright TypeScript test suite.
@@ -43,7 +39,7 @@
 
 ## 🏗 Architecture
 
-AutoSpectre employs a multi-stage agentic pipeline to transform raw HTML into executable code.
+AutoSpectre™ employs a multi-stage agentic pipeline to transform raw HTML into executable code.
 
 ```mermaid
 flowchart TD
@@ -51,7 +47,7 @@ flowchart TD
     A[URL Input]
     end
 
-    subgraph Core_Engine ["🧠 AutoSpectre Engine"]
+    subgraph Core_Engine ["🧠 AutoSpectre™ Engine"]
     B[DOM Analysis Agent] -->|Extracts Semantics| C[Discovery Agent]
     C -->|Identifies Flows| D[Design Agent]
     D -->|Architects Scenarios| E[Codegen Agent]
@@ -112,7 +108,7 @@ npm run test
 
 ## ⚙️ Configuration
 
-AutoSpectre follows the **Policy-as-Code** philosophy. You can customize the behavior of the agents by modifying the policy file at `policies/instructions.md`.
+AutoSpectre™ follows the **Policy-as-Code** philosophy. You can customize the behavior of the agents by modifying the policy file at `policies/instructions.md`.
 
 **Default Policies (`policies/instructions.md`):**
 
@@ -125,7 +121,7 @@ AutoSpectre follows the **Policy-as-Code** philosophy. You can customize the beh
 
 ## 📝 Example Output
 
-After running the generation command, AutoSpectre produces strictly typed, clean code:
+After running the generation command, AutoSpectre™ produces strictly typed, clean code:
 
 ```typescript
 // generated/tests/Login.spec.ts
@@ -178,7 +174,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-<div align="center">
-  <b>Built by Mukul</b><br>
-  Built an AI‑driven QA platform that auto‑generates Playwright tests and self‑healing Page Objects from a single URL using agent‑based LLM orchestration.
-</div>
+**AutoSpectre™**
+> Built an AI‑driven QA platform that auto‑generates Playwright tests and self‑healing Page Objects from a single URL using agent‑based LLM orchestration.
+
+**Created by Mukul**
