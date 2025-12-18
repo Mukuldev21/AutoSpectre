@@ -14,10 +14,10 @@
 
 ### 📚 Table of Contents
 - [Introduction](#-introduction)
+- [Enterprise Features](#-enterprise-features)
 - [Key Features](#-key-features)
-- [Architecture](#-architecture)
-- [Quick Start](#-quick-start)
 - [Configuration](#-configuration)
+- [Enterprise Architecture](#-architecture)
 - [Roadmap](#-roadmap)
 
 ---
@@ -44,7 +44,7 @@
 
 ---
 
-## 🏗 Architecture
+## 🏗 Enterprise Architecture
 
 AutoSpectre™ employs a multi-stage agentic pipeline to transform raw HTML into executable code.
 
@@ -159,8 +159,8 @@ test('[Login] Verify successful user authentication', async ({ page }) => {
 
 - [x] **Self-Healing Engine**: Automatically repairs broken selectors during runtime using a learned memory system.
 - [x] **Groq Integration**: High-speed test generation using `llama-3.3-70b-versatile`.
-- [ ] **Visual Regression**: Integration with Percy/Applitools.
-- [ ] **Cloud Execution**: One-click run on BrowserStack/SauceLabs.
+- [x] **Visual Regression**: Integrated with Playwright Snapshots.
+- [ ] **Cloud Execution**: One-click run on BrowserStack/SauceLabs (Coming Q2).
 - [ ] **API Testing**: Auto-generation of API tests from Swagger/OpenAPI specs.
 
 ---

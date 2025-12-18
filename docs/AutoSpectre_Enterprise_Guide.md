@@ -1,6 +1,4 @@
 # AutoSpectre™:
-> **Self-Healing AI for Enterprise QA**
-
 ## Technical Architecture & Best Practices Guide
 
 **Version:** 1.0.0
@@ -53,8 +51,6 @@ graph TD
         Healer -->|Recovers| Memory[Selector Memory]
     end
 ```
-**Data Flow Narrative:**  
-*User triggers → Runner injects → Analyzer discovers → Agents generate → Review gates → Playwright executes → Healer recovers.*
 
 ---
 
@@ -83,24 +79,16 @@ Security and ease-of-use are balanced via the **Credential Manager**:
 -   **Intelligent Auto-Save**: When you run `npm run generate <url> --user=<val> --pass=<val>`, credentials are encrypted/saved locally to `credentials.json` (git-ignored).
 -   **Auto-Load**: Subsequent runs automatically recall these credentials, enabling "Zero-Touch" analysis.
 
-### 3.5. Enterprise Assurance
--   **Security**: Credentials are encrypted locally and never committed. AutoSpectre™ aligns with SOC2/Enterprise security practices.
--   **Scalability**: Architecture supports SaaS, internal tools, and multi-tenant enterprise apps with zero reconfiguration.
-
 ---
 
 ## 4. Best Practices
 
 To maintain "Enterprise Level" reliability, adhere to these guidelines:
 
-### 4.1. Do's and Don'ts
-
-| ✅ Do | ❌ Don’t |
-|------|----------|
-| Commit generated tests (`generated/tests/`) | Commit sensitive credentials (`credentials.json`) |
-| Use Page Object Model (`AppPage`) | Use raw selectors (e.g., `page.click`) |
-| Review artifacts before merging | Bypass strict Review Gates |
-| update snapshots via CI | Ignore visual regression failures |
+### 4.1. Code Generation Standards
+*   **Strict Page Object Model (POM)**: NEVER write raw Playwright selectors (e.g., `page.click('.btn')`) in test files. Always delegate to the `AppPage` class.
+*   **Encapsulation**: Tests should read like English sentences (e.g., `await appPage.loginButton().click()`).
+*   **Review Gates**: The **Review Agent** automatically rejects generated code that violates these rules. Do not bypass it.
 
 ### 4.2. Operational Workflow
 1.  **Demonstrate First**: For new applications, run the generation with credentials once to prime the memory.
@@ -146,7 +134,7 @@ npm run generate <your-application-url> --user=<username> --pass=<password>
 ```bash
 npm run setup:ci
 ```
-*This command automatically creates `.github/workflows/autospectre-ci.yml`. AutoSpectre also supports GitLab CI, Jenkins, and Azure DevOps via standard Docker containers.*
+*This command automatically creates `.github/workflows/autospectre-ci.yml` for instant Continuous Integration.*
 
 ### Running Tests
 ```bash
