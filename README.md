@@ -26,8 +26,9 @@
 
 **AutoSpectre™** is a next-generation QA automation platform that leverages Large Language Models (LLMs) to autonomously generate, execute, and maintain Playwright test suites. Unlike traditional record-and-playback tools, AutoSpectre™ understands the *intent* of your application, creating resilient test flows that adapt to UI changes.
 
-> **Input**: A single URL (e.g., `https://www.saucedemo.com`)  
+> **Input**: A single URL (e.g., `https://www.saucedemo.com` or your own application)  
 > **Output**: A fully functional, production-ready Playwright TypeScript test suite.
+> *Note: While documentation uses `saucedemo.com` for demonstration, AutoSpectre™ is designed to work with ANY web application.*
 
 ---
 
@@ -97,8 +98,16 @@ flowchart TD
 ### Usage
 
 **Generate a test suite from a URL**
+*(Example using saucedemo, but works with any URL)*
 ```bash
 npm run generate -- https://www.saucedemo.com
+# OR
+npm run generate -- <your-target-url>
+```
+
+**Set up CI/CD Pipeline**
+```bash
+npm run setup:ci
 ```
 
 **Run the generated tests**
