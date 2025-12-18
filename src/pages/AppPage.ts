@@ -25,14 +25,14 @@ export class AppPage extends BasePage {
   "input[type=\"submit\"]"
 ]);
   }
-  async OpenMenuButton() {
+  async openMenuButton() {
     return this.getElement('OpenMenuButton', [
   "text=Open Menu",
   "#react-burger-menu-btn",
   "button"
 ]);
   }
-  async CloseMenuButton() {
+  async closeMenuButton() {
     return this.getElement('CloseMenuButton', [
   "text=Close Menu",
   "#react-burger-cross-btn",
@@ -87,28 +87,28 @@ export class AppPage extends BasePage {
   "button"
 ]);
   }
-  async AllItemsLink() {
+  async allItemsLink() {
     return this.getElement('AllItemsLink', [
   "text=All Items",
   "#inventory_sidebar_link",
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async AboutLink() {
+  async aboutLink() {
     return this.getElement('AboutLink', [
   "text=About",
   "#about_sidebar_link",
   "a[href=\"https://saucelabs.com/\"]"
 ]);
   }
-  async LogoutLink() {
+  async logoutLink() {
     return this.getElement('LogoutLink', [
   "text=Logout",
   "#logout_sidebar_link",
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async ResetAppStateLink() {
+  async resetAppStateLink() {
     return this.getElement('ResetAppStateLink', [
   "text=Reset App State",
   "#reset_sidebar_link",
@@ -126,7 +126,7 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async SauceLabsBackpackLink() {
+  async sauceLabsBackpackLink() {
     return this.getElement('SauceLabsBackpackLink', [
   "text=Sauce Labs Backpack",
   "#item_4_title_link",
@@ -139,7 +139,7 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async SauceLabsBikeLightLink() {
+  async sauceLabsBikeLightLink() {
     return this.getElement('SauceLabsBikeLightLink', [
   "text=Sauce Labs Bike Light",
   "#item_0_title_link",
@@ -152,7 +152,7 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async SauceLabsBoltTShirtLink() {
+  async sauceLabsBoltTShirtLink() {
     return this.getElement('SauceLabsBoltTShirtLink', [
   "text=Sauce Labs Bolt T-Shirt",
   "#item_1_title_link",
@@ -165,7 +165,7 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async SauceLabsFleeceJacketLink() {
+  async sauceLabsFleeceJacketLink() {
     return this.getElement('SauceLabsFleeceJacketLink', [
   "text=Sauce Labs Fleece Jacket",
   "#item_5_title_link",
@@ -178,7 +178,7 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async SauceLabsOnesieLink() {
+  async sauceLabsOnesieLink() {
     return this.getElement('SauceLabsOnesieLink', [
   "text=Sauce Labs Onesie",
   "#item_2_title_link",
@@ -191,26 +191,26 @@ export class AppPage extends BasePage {
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async TestallTheThingsTShirtRedLink() {
+  async testallTheThingsTShirtRedLink() {
     return this.getElement('TestallTheThingsTShirtRedLink', [
   "text=Test.allTheThings() T-Shirt (Red)",
   "#item_3_title_link",
   "a[href=\"https://www.saucedemo.com/inventory.html#\"]"
 ]);
   }
-  async TwitterLink() {
+  async twitterLink() {
     return this.getElement('TwitterLink', [
   "text=Twitter",
   "a[href=\"https://twitter.com/saucelabs\"]"
 ]);
   }
-  async FacebookLink() {
+  async facebookLink() {
     return this.getElement('FacebookLink', [
   "text=Facebook",
   "a[href=\"https://www.facebook.com/saucelabs\"]"
 ]);
   }
-  async LinkedInLink() {
+  async linkedInLink() {
     return this.getElement('LinkedInLink', [
   "text=LinkedIn",
   "a[href=\"https://www.linkedin.com/company/sauce-labs/\"]"

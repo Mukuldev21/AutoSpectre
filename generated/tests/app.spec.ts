@@ -10,23 +10,35 @@ test.describe('App Page Tests', () => {
   });
 
   // Scenario 1: Happy Path
-  test('Happy Path: Login Success', async ({ page }) => {
+  test('Happy Path: Login and Add to Cart', async ({ page }) => {
     await test.step('Step 1: Enter username', async () => {
       const field = await appPage.userName();
       await field.fill('standard_user');
     });
+
     await test.step('Step 2: Enter password', async () => {
       const field = await appPage.password();
       await field.fill('secret_sauce');
     });
+
     await test.step('Step 3: Click login button', async () => {
       const button = await appPage.loginButton();
       await button.click();
     });
-    await test.step('Step 4: Verify navigation to inventory page', async () => {
-      await expect(await appPage.inventoryContainer()).toBeVisible();
+
+    await test.step('Step 4: Add to cart', async () => {
+      const button = await appPage.addToCartButton();
+      await button.click();
     });
-    await expect(page).toHaveScreenshot();
+
+    await test.step('Step 5: Verify shopping cart badge', async () => {
+      const badge = await appPage.shoppingCartBadge();
+      await expect(await badge.textContent()).toBe('1');
+    });
+
+    await test.step('Step 6: Take screenshot', async () => {
+      await expect(page).toHaveScreenshot();
+    });
   });
 
   // Scenario 2: Validation
@@ -35,16 +47,20 @@ test.describe('App Page Tests', () => {
       const field = await appPage.userName();
       await field.fill('invalid_user');
     });
+
     await test.step('Step 2: Enter invalid password', async () => {
       const field = await appPage.password();
       await field.fill('invalid_password');
     });
+
     await test.step('Step 3: Click login button', async () => {
       const button = await appPage.loginButton();
       await button.click();
     });
+
     await test.step('Step 4: Verify error message', async () => {
-      await expect(await appPage.errorMessage()).toBeVisible();
+      const message = await appPage.errorMessage();
+      await expect(await message.textContent()).toBe('Epic sadface: Username and password do not match any user in this service');
     });
   });
 
@@ -54,8 +70,10 @@ test.describe('App Page Tests', () => {
       const button = await appPage.loginButton();
       await button.click();
     });
+
     await test.step('Step 2: Verify error message', async () => {
-      await expect(await appPage.errorMessage()).toBeVisible();
+      const message = await appPage.errorMessage();
+      await expect(await message.textContent()).toBe('Epic sadface: Username is required');
     });
   });
 });
