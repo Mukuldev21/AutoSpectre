@@ -1,8 +1,6 @@
 import fs from 'fs';
 
-function toCamelCase(str: string) {
-    return str.replace(/[-_ ]+([a-zA-Z0-9])/g, (g) => g[1].toUpperCase());
-}
+import { toCamelCase } from '../utils/nameUtils';
 
 export async function generatePageObject(
     pageName: string,

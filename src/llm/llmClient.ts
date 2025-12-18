@@ -23,7 +23,14 @@ export async function callLLM(prompt: string): Promise<string> {
 
         const content = chatCompletion.choices[0]?.message?.content || "// No content returned";
 
-        // Clean up code fences if present
+        // Extract content inside ```typescript or ``` blocks
+        const codeBlockRegex = /```(?:typescript|ts)?([\s\S]*?)```/;
+        const match = content.match(codeBlockRegex);
+
+        if (match && match[1]) {
+            return match[1].trim();
+        }
+
         const cleanContent = content.replace(/```typescript/g, '').replace(/```/g, '').trim();
         return cleanContent;
 
