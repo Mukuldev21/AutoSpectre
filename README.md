@@ -6,18 +6,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.43-2EAD33?style=flat-square&logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Powered by Groq](https://img.shields.io/badge/Powered%20by-Groq-F55036?style=flat-square&logo=fastapi&logoColor=white)](https://groq.com)
 [![Status](https://img.shields.io/badge/Status-Active-success.svg?style=flat-square)]()
 
 **Transform a single URL into a robust, enterprise-grade test suite in minutes.**
 
+> **� Enterprise Users**: Read the comprehensive [Technical Architecture & Best Practices Guide](docs/AutoSpectre_Enterprise_Guide.md) for SOC2 compliance, scalability, and deep-dive architecture.
+
 ---
 
-### 📚 Table of Contents
 - [Introduction](#-introduction)
-- [Enterprise Features](#-enterprise-features)
 - [Key Features](#-key-features)
+- [Enterprise Architecture](#-enterprise-architecture)
+- [Quick Start](#-quick-start)
 - [Configuration](#-configuration)
-- [Enterprise Architecture](#-architecture)
 - [Roadmap](#-roadmap)
 
 ---
