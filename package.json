@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "generate": "ts-node src/runner.ts",
-    "test": "playwright test"
+    "setup:ci": "ts-node src/tools/setup-ci.ts",
+    "test": "playwright test --update-snapshots",
+    "test:strict": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.43.0",
